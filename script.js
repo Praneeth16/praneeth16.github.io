@@ -1,3 +1,8 @@
+// Clean URL - Remove index.html from URL if present
+if (window.location.pathname.endsWith('/index.html')) {
+    window.history.replaceState({}, document.title, window.location.pathname.replace('/index.html', '/'));
+}
+
 // Theme Toggle Functionality
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
